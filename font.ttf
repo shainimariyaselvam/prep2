@@ -1,0 +1,14 @@
+from PIL import Image, ImageDraw, ImageFont
+
+# Load the font
+font = ImageFont.truetype("font.ttf", size=40)
+
+# Create an image
+image = Image.new("RGB", (400, 100), color="white")
+draw = ImageDraw.Draw(image)
+
+# Draw text
+draw.text((10, 25), "Hello, World!", font=font, fill="black")
+
+# Save image
+image.save("output.png")
